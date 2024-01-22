@@ -33,7 +33,7 @@ export default function Home() {
     <main className="mb-10">
       <header className="py-4 border border-b-zinc-500 ">
         <Container>
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col justify-between items-center sm:flex-row">
             <h1 className="text-2xl">My Country</h1>
             <input
               type="text"
@@ -45,7 +45,7 @@ export default function Home() {
         </Container>
       </header>
       <Container>
-        <div className="grid grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-4">
           {countries
             .filter((country) =>
               country.name.common.toLowerCase().includes(filterInput),

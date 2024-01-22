@@ -23,12 +23,12 @@ function Countries() {
   })
 
   return (
-    <main className="mt-10">
+    <main className="mt-32 sm:mt-10">
       <Container>
         {countryData.map((country, index) => (
           <div key={index} className="flex flex-col items-center ">
             <img
-              className="w-[800px] h-[400px]"
+              className="w-80 sm:w-[800px] sm:h-[400px]"
               src={country.flags.svg}
               alt={country.flags.alt}
             />
