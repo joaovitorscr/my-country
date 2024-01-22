@@ -1,5 +1,6 @@
 import backIcon from '@/assets/back.svg'
 import Container from '@/components/Container'
+import { numberFormat } from '@/lib/utils'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { country } from '../types/country'
@@ -48,12 +49,17 @@ function Countries() {
                   <span className="font-bold">Sub-Region: </span>
                   {country.subregion}
                 </p>
-                <p>
-                  <span className="font-bold">Borders: </span> {country.borders}
+                <p className="flex">
+                  <span className="space-x-2">
+                    <b>Borders:</b>
+                    {country.borders.map((item, index) => (
+                      <span key={index}>{item}</span>
+                    ))}
+                  </span>
                 </p>
                 <p>
                   <span className="font-bold">Population: </span>
-                  {country.population}
+                  {numberFormat(country.population)}
                 </p>
               </div>
               <div className="text-center mt-20">

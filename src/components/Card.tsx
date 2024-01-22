@@ -1,3 +1,5 @@
+import { numberFormat } from '@/lib/utils'
+
 type Props = {
   flag: string
   alt: string
@@ -17,7 +19,7 @@ export default function Card({ flag, alt, name, region, population }: Props) {
             <b>Region:</b> {region}
           </p>
           <p>
-            <b>Total Population:</b> {population}
+            <b>Total Population:</b> {numberFormat(population)}
           </p>
         </div>
       </div>
