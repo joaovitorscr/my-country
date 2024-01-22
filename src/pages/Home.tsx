@@ -1,5 +1,6 @@
 import Card from '@/components/Card'
 import Container from '@/components/Container'
+import { useToast } from '@/components/ui/use-toast'
 import { country } from '@/types/country'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   const [countries, setCountries] = useState<country[]>([])
   const [filterInput, setFilterInput] = useState<string>('')
+  const { toast } = useToast()
 
   useEffect(() => {
     async function fetchData() {
@@ -15,7 +17,11 @@ export default function Home() {
           .then((data) => data.json())
           .then((data) => setCountries(data))
       } catch (e) {
-        // Sonner toast in here later!
+        toast({
+          title: 'Error while retrieving the data',
+          variant: 'destructive',
+          description: 'Try again later!',
+        })
         console.log(e)
       }
     }
