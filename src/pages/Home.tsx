@@ -29,7 +29,10 @@ export default function Home() {
       <Container>
         <div className="grid grid-cols-4 gap-4 mt-10">
           {countries.map((country) => (
-            <Link key={country.ccn3} to={`/countries/${country.ccn3}`}>
+            <Link
+              key={country.ccn3}
+              to={`/countries/${country.name.common.toLowerCase()}`}
+            >
               <Card
                 flag={country.flags.png}
                 alt={country.flags.alt}

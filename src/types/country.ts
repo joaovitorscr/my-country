@@ -7,9 +7,7 @@ export type country = {
   capital: string
   region: string
   subregion: string
-  languages: {
-    cat: string
-  }
+  languages: object
   borders: string[]
   population: number
   flags: {

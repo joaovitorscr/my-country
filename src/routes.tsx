@@ -5,7 +5,7 @@ import Countries from './pages/Countries'
 const MyRoutes = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/countries/:id" element={<Countries />} />
+    <Route path="/countries/:name" element={<Countries />} />
   </Routes>
 )
 
