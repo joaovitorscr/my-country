@@ -9,8 +9,8 @@ export default function Header() {
           {/* Search bar -> */}
           <input
             type="text"
-            placeholder="Search your country"
-            className="border rounded-md px-4"
+            placeholder="Search my country"
+            className="border rounded-md px-4 py-2 focus:outline-1"
           />
         </div>
       </Container>

@@ -3,6 +3,7 @@ export type country = {
     common: string
     official: string
   }
+  ccn3: string
   capital: string
   region: string
   subregion: string
